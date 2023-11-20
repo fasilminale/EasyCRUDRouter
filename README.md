@@ -2,6 +2,18 @@
 
 EasyCRUDRouter is a Node.js library designed to simplify and automate the creation of CRUD (Create, Read, Update, Delete) routes for Express applications, specifically tailored for Mongoose models. It integrates mongoose-paginate-v2 for efficient pagination and provides built-in support for error handling and Joi validation.
 
+## Table of Contents
+
+- [EasyCRUDRouter](#easycrudrouter)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Quick Start](#quick-start)
+  - [Documentation](#documentation)
+  - [Examples](#examples)
+  - [Contributing](#contributing)
+  - [License](#license)
+
 ## Features
 
 - **Seamless Mongoose Integration**: Designed to work effortlessly with Mongoose models.
@@ -47,16 +59,18 @@ app.listen(3000, () => console.log("Server running on port 3000"));
 
 ## Documentation
 
-For a comprehensive guide on all functionalities and usage, refer to the [API Reference](APIReference.md).
+- [Getting Started Guide](https://github.com/fasilminale/EasyCRUDRouter/blob/main/docs/GettingStarted.md)
+- [API Reference](https://github.com/fasilminale/EasyCRUDRouter/blob/main/docs/APIReference.md)
+- [Examples](https://github.com/fasilminale/EasyCRUDRouter/tree/main/examples)
 
 ## Examples
 
-Explore the [examples](examples/) directory for sample implementations and various usage scenarios.
+Explore the [examples directory](https://github.com/fasilminale/EasyCRUDRouter/tree/main/examples) for sample implementations and various usage scenarios.
 
 ## Contributing
 
-We appreciate contributions! If you'd like to contribute, please read our [contributing guidelines](CONTRIBUTING.md).
+We appreciate contributions! If you'd like to contribute, please read our [contributing guidelines](https://github.com/fasilminale/EasyCRUDRouter/blob/main/CONTRIBUTING.md).
 
 ## License
 
-EasyCRUDRouter is [MIT licensed](LICENSE).
+EasyCRUDRouter is [MIT licensed](https://github.com/fasilminale/EasyCRUDRouter/blob/main/LICENSE).
