@@ -9,8 +9,7 @@ EasyCRUDRouter is a Node.js library designed to simplify and automate the creati
   - [Features](#features)
   - [Installation](#installation)
   - [Quick Start](#quick-start)
-  - [Documentation](#documentation)
-    - [Getting Started with EasyCRUDRouter](#getting-started-with-easycrudrouter)
+  - [Getting Started with EasyCRUDRouter](#getting-started-with-easycrudrouter)
     - [Installation](#installation-1)
     - [Setting Up Your First Routes](#setting-up-your-first-routes)
       - [Step 1: Import Dependencies](#step-1-import-dependencies)
@@ -19,21 +18,20 @@ EasyCRUDRouter is a Node.js library designed to simplify and automate the creati
       - [Step 4: Initialize Mongoose](#step-4-initialize-mongoose)
       - [Step 5: Create CRUD Routes](#step-5-create-crud-routes)
       - [Step 6: Use Routes with Express](#step-6-use-routes-with-express)
-    - [Next Steps](#next-steps)
-    - [EasyCRUDRouter API Reference](#easycrudrouter-api-reference)
-      - [Constructor](#constructor)
-        - [`new CRUDRoutes({ model, joiSchema, referenceFields, middleware })`](#new-crudroutes-model-joischema-referencefields-middleware-)
-          - [Parameters](#parameters)
-      - [Methods](#methods)
-        - [`createOne(req, res)`](#createonereq-res)
-        - [`getOne(req, res)`](#getonereq-res)
-        - [`getAll(req, res)`](#getallreq-res)
-        - [`updateOne(req, res)`](#updateonereq-res)
-        - [`deleteOne(req, res)`](#deleteonereq-res)
-        - [`patchOne(req, res)`](#patchonereq-res)
-      - [Middleware](#middleware)
-      - [Pagination and Filters](#pagination-and-filters)
-      - [Swagger Integration](#swagger-integration)
+  - [EasyCRUDRouter API Reference](#easycrudrouter-api-reference)
+    - [Constructor](#constructor)
+      - [`new CRUDRoutes({ model, joiSchema, referenceFields, middleware })`](#new-crudroutes-model-joischema-referencefields-middleware-)
+        - [Parameters](#parameters)
+    - [Methods](#methods)
+      - [`createOne(req, res)`](#createonereq-res)
+      - [`getOne(req, res)`](#getonereq-res)
+      - [`getAll(req, res)`](#getallreq-res)
+      - [`updateOne(req, res)`](#updateonereq-res)
+      - [`deleteOne(req, res)`](#deleteonereq-res)
+      - [`patchOne(req, res)`](#patchonereq-res)
+    - [Middleware](#middleware)
+    - [Pagination and Filters](#pagination-and-filters)
+    - [Swagger Integration](#swagger-integration)
   - [Examples](#examples)
   - [Contributing](#contributing)
   - [License](#license)
@@ -81,11 +79,9 @@ app.use("/api/myModel", myCRUDRoutes.router);
 app.listen(3000, () => console.log("Server running on port 3000"));
 ```
 
-## Documentation
+## Getting Started with EasyCRUDRouter
 
-### Getting Started with EasyCRUDRouter
-
-Welcome to `EasyCRUDRouter`! This guide will walk you through the basics of using this package to set up CRUD routes in Node.js applications, with a focus on Mongoose models and pagination.
+This guide will walk you through the basics of using this package to set up CRUD routes in Node.js applications, with a focus on Mongoose models and pagination.
 
 ### Installation
 
@@ -169,56 +165,50 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 ```
 
-### Next Steps
-
-- Explore the [API Reference](APIReference.md) for detailed information on EasyCRUDRouter's capabilities.
-- Check out the [examples](examples/) directory for various usage scenarios.
-- Ensure you handle database connections and disconnections appropriately in your application.
-
-### EasyCRUDRouter API Reference
+## EasyCRUDRouter API Reference
 
 This document provides detailed information about the API of `EasyCRUDRouter`, a Node.js package for creating CRUD (Create, Read, Update, Delete) routes quickly and efficiently with Mongoose models and `mongoose-paginate-v2`.
 
-#### Constructor
+### Constructor
 
-##### `new CRUDRoutes({ model, joiSchema, referenceFields, middleware })`
+#### `new CRUDRoutes({ model, joiSchema, referenceFields, middleware })`
 
 Creates a new instance of CRUDRoutes.
 
-###### Parameters
+##### Parameters
 
 - `model`: Your Mongoose data model.
 - `joiSchema`: Joi schema for input validation.
 - `referenceFields`: Optional. Array of objects specifying reference fields for relational data handling.
 - `middleware`: Optional. An object specifying middleware for different CRUD operations.
 
-#### Methods
+### Methods
 
-##### `createOne(req, res)`
+#### `createOne(req, res)`
 
 Handles creating a new record.
 
-##### `getOne(req, res)`
+#### `getOne(req, res)`
 
 Fetches a single record by its ID.
 
-##### `getAll(req, res)`
+#### `getAll(req, res)`
 
 Retrieves multiple records, with support for pagination and filters.
 
-##### `updateOne(req, res)`
+#### `updateOne(req, res)`
 
 Updates a record by its ID.
 
-##### `deleteOne(req, res)`
+#### `deleteOne(req, res)`
 
 Deletes a record by its ID.
 
-##### `patchOne(req, res)`
+#### `patchOne(req, res)`
 
 Partially updates a record by its ID.
 
-#### Middleware
+### Middleware
 
 Middleware functions can be added to CRUD operations. Here's how you can specify them:
 
@@ -232,11 +222,11 @@ const myCRUDRoutes = new CRUDRoutes({
 });
 ```
 
-#### Pagination and Filters
+### Pagination and Filters
 
 `EasyCRUDRouter` integrates `mongoose-paginate-v2` for efficient pagination and filtering of data. Pagination and filter options can be passed through the query parameters.
 
-#### Swagger Integration
+### Swagger Integration
 
 `EasyCRUDRouter` supports automatic Swagger documentation generation. Use `getPaths` to integrate with Swagger:
 
