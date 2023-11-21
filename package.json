@@ -1,6 +1,6 @@
 {
   "name": "easy-crud-router",
-  "version": "1.0.4",
+  "version": "1.1.3",
   "description": "EasyCRUDRouter: A streamlined, efficient JavaScript library for effortlessly setting up CRUD (Create, Read, Update, Delete) routes in Node.js applications. Designed for simplicity and ease of use, it automatically generates express route handlers, supports custom middleware, and offers extensibility for service layer enhancements. Ideal for rapid API development with built-in validation and error handling capabilities, EasyCRUDRouter simplifies backend routing, making it perfect for both beginners and experienced developers.",
   "main": "index.js",
   "scripts": {
@@ -34,6 +34,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "express": "^4.18.2",
     "joi": "^17.11.0",
     "joi-to-swagger": "^6.2.0",
     "mongoose": "7.3.0",

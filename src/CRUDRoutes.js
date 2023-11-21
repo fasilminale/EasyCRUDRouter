@@ -1,3 +1,4 @@
+const express = require("express");
 const validateInput = require("./middleware/validateInput");
 const handleError = require("./middleware/handleError");
 const checkId = require("./utils/checkId");
@@ -6,6 +7,7 @@ const BaseService = require("./BaseService");
 
 class CRUDRoutes {
   constructor({ model, joiSchema, referenceFields = [], middleware = {} }) {
+    this.router = express.Router();
     // Create a service instance
     this.service = new BaseService({
       model: model,
@@ -14,11 +16,8 @@ class CRUDRoutes {
 
     // Set up default middleware
     this.defaultMiddleware = [validateInput(joiSchema)];
-    if (
-      this.service.referenceFields &&
-      this.service.referenceFields.length > 0
-    ) {
-      this.defaultMiddleware.push(checkId(this.service.referenceFields));
+    if (referenceFields && referenceFields.length > 0) {
+      this.defaultMiddleware.push(checkId(referenceFields));
     }
     // Bind all methods
     this.bindMethods();
@@ -27,7 +26,7 @@ class CRUDRoutes {
     this.initializeRoutes(middleware);
 
     this.getPaths = new SwaggerPathGenerator({
-      model: service.model,
+      model: model,
       schema: joiSchema,
     }).getPaths;
   }
